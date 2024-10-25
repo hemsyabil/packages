@@ -6,7 +6,6 @@ import csv
 import json
 from datetime import datetime
 import requests
-# from googletrans import Translator
 
 
 """Module documentation here."""
@@ -30,29 +29,20 @@ print(f"Dev. Status: {__status__}")
 print("----------------------------------------------------------------")
 
 
-# Helper functions
-# def translate_to_french(text):
-#     translator = Translator()
-#     translated_text = translator.translate(text, src='en', dest='fr')
-#     return translated_text.text
-
 def translate_to_french(text):
-    url = "https://translate.googleapis.com/translate_a/single"
+    url = "https://libretranslate.com/translate"
     params = {
-        'client': 'gtx',    # Google Translate client
-        'sl': 'auto',       # Source language (auto-detect)
-        'tl': 'fr',         # Target language
-        'dt': 't',          # Data type (text)
-        'q': text           # Text to translate
+        'q': text,
+        'source': 'auto',  # Auto-detect source language
+        'target': 'fr',
+        'format': 'text'
     }
 
-    response = requests.get(url, params=params)
+    response = requests.post(url, data=params)
 
     if response.status_code == 200:
-        # Parse the JSON response
-        translation = json.loads(response.text)
-        return translation[0][0][0]  # Extract the translated text
-
+        translation = response.json()
+        return translation['translatedText']
 
 def get_day_of_week(date_string):
     date_obj = format_date_time_object(date_string)
