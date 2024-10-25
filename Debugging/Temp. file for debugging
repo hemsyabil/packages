@@ -1,61 +1,20 @@
 >>>print(sys.version): 3.9.2rc1 (tags/v3.9.2rc1:4064156, Feb 17 2021, 11:25:18) [MSC v.1928 64 bit (AMD64)]
 
-PS C:\Hem's Documents\CM Reporting\CCR - Main\packages> pip install .\googletrans-3.0.0.tar.gz --no-index --no-build-isolation --no-deps
-Processing c:\hem's documents\cm reporting\ccr - main\packages\googletrans-3.0.0.tar.gz
-    ERROR: Command errored out with exit status 1:
-     command: 'c:\users\jrf046\appdata\local\programs\python\python39\python.exe' -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\jrf046\\AppData\\Local\\Temp\\pip-req-build-4sv75oa_\\setup.py'"'"'; __file__='"'"'C:\\Users\\jrf046\\AppData\\Local\\Temp\\pip-req-build-4sv75oa_\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base 'C:\Users\jrf046\AppData\Local\Temp\pip-pip-egg-info-mixz0gq8'
-         cwd: C:\Users\jrf046\AppData\Local\Temp\pip-req-build-4sv75oa_\
-    Complete output (52 lines):
-    c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\dist.py:498: SetuptoolsDeprecationWarning: Invalid dash-separated options
-    !!
+def __init__(self, service_urls=None, user_agent=DEFAULT_USER_AGENT,
+                 #raise_exception=DEFAULT_RAISE_EXCEPTION,
+                 # proxies: typing.Dict[str, httpcore.SyncHTTPTransport] = None, timeout: Timeout = None):
 
-            ********************************************************************************
-            Usage of dash-separated 'description-file' will not be supported in future
-            versions. Please use the underscore name 'description_file' instead.
+        self.client = httpx.Client()
+        if proxies is not None:  # pragma: nocover
+            self.client.proxies = proxies
 
-            This deprecation is overdue, please update your project and remove deprecated
-            calls to avoid build errors in the future.
+        self.client.headers.update({
+            'User-Agent': user_agent,
+        })
 
-            See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
-            ********************************************************************************
+        if timeout is not None:
+            self.client.timeout = timeout
 
-    !!
-      opt = self.warn_dash_deprecation(opt, section)
-    Traceback (most recent call last):
-      File "<string>", line 1, in <module>
-      File "C:\Users\jrf046\AppData\Local\Temp\pip-req-build-4sv75oa_\setup.py", line 72, in <module>
-        install()
-      File "C:\Users\jrf046\AppData\Local\Temp\pip-req-build-4sv75oa_\setup.py", line 37, in install
-        setup(
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\__init__.py", line 103, in setup
-        return distutils.core.setup(**attrs)
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\_distutils\core.py", line 147, in setup
-        _setup_distribution = dist = klass(attrs)
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\dist.py", line 303, in __init__
-        _Distribution.__init__(self, dist_attrs)
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\_distutils\dist.py", line 283, in __init__
-        self.finalize_options()
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\dist.py", line 679, in finalize_options
-        for ep in sorted(loaded, key=by_order):
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\dist.py", line 678, in <lambda>
-        loaded = map(lambda e: e.load(), filtered)
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\setuptools\_vendor\importlib_metadata\__init__.py", line 208, in load
-        module = import_module(match.group('module'))
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\importlib\__init__.py", line 127, in import_module
-        return _bootstrap._gcd_import(name[level:], package, level)
-      File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-      File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-      File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-      File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-      File "<frozen importlib._bootstrap_external>", line 790, in exec_module
-      File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\cx_Freeze\__init__.py", line 12, in <module>
-        from .command.build_exe import BuildEXE as build_exe
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\cx_Freeze\command\build_exe.py", line 13, in <module>
-        from cx_Freeze.freezer import Freezer
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\cx_Freeze\freezer.py", line 32, in <module>
-        from .parser import ELFParser, Parser, PEParser
-      File "c:\users\jrf046\appdata\local\programs\python\python39\lib\site-packages\cx_Freeze\parser.py", line 28, in <module>
-        lief.logging.set_level(lief.logging.LOGGING_LEVEL.ERROR)
-    AttributeError: module 'lief._lief.logging' has no attribute 'LOGGING_LEVEL'
-ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+        self.service_urls = service_urls or ['translate.google.com']
+        self.token_acquirer = TokenAcquirer(client=self.client, host=self.service_urls[0])
+        self.raise_exception = raise_exception
