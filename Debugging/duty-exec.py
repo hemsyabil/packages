@@ -693,7 +693,7 @@ if __name__ == "__main__":
 
     html_content = generate_html(
         sorted_maintenance_schedules, start_of_weekend, next_week_friday, total_records)
-    file_name = f'Duty Executive Lookahead {start_of_weekend} - {next_week_friday}.html'
+    file_name = f'Duty Executive Lookahead: {start_of_weekend} - {next_week_friday}.html'
 
     with open(file_name, "w", encoding='utf-8') as f:
         f.write(html_content)
