@@ -1,11 +1,11 @@
->>>print(sys.version): 3.9.2rc1 (tags/v3.9.2rc1:4064156, Feb 17 2021, 11:25:18) [MSC v.1928 64 bit (AMD64)]
+class Translator:
+    def __init__(self, service_urls=None, user_agent=DEFAULT_USER_AGENT,
+                 raise_exception=DEFAULT_RAISE_EXCEPTION,
+                 proxies: typing.Dict[str, str] = None, timeout: Timeout = None):
 
-def __init__(self, service_urls=None, user_agent=DEFAULT_USER_AGENT,
-                 #raise_exception=DEFAULT_RAISE_EXCEPTION,
-                 # proxies: typing.Dict[str, httpcore.SyncHTTPTransport] = None, timeout: Timeout = None):
-
-        self.client = httpx.Client()
+        self.client = Client()
         if proxies is not None:  # pragma: nocover
+            # Set the proxies directly for httpx compatibility
             self.client.proxies = proxies
 
         self.client.headers.update({
