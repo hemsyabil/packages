@@ -1,22 +1,34 @@
-def __init__(self, service_urls=None, user_agent=DEFAULT_USER_AGENT,
-             raise_exception=DEFAULT_RAISE_EXCEPTION,
-             proxies: typing.Dict[str, str] = None, timeout: Timeout = None):
-
-    ssl_context = ssl.create_default_context()
-    ssl_context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1  # Disable older, insecure versions
-    
-    self.client = httpx.Client(http2=False, verify=ssl_context)        
-    if proxies is not None:  # pragma: nocover
-        # Set the proxies directly for httpx compatibility
-        self.client.proxies = proxies
-
-    self.client.headers.update({
-        'User-Agent': user_agent,
-    })
-
-    if timeout is not None:
-        self.client.timeout = timeout
-
-    self.service_urls = service_urls or ['translate.google.com']
-    self.token_acquirer = TokenAcquirer(client=self.client, host=self.service_urls[0])
-    self.raise_exception = raise_exception
+Traceback (most recent call last):
+  File "C:\Hem's Documents\CM Reporting\CCR - Main\duty-executive\duty_exec.py", line 673, in <module>
+    html_content = generate_html(
+  File "C:\Hem's Documents\CM Reporting\CCR - Main\duty-executive\duty_exec.py", line 112, in generate_html
+    from_date_fr = translate_to_french(from_date_en)
+  File "C:\Hem's Documents\CM Reporting\CCR - Main\duty-executive\duty_exec.py", line 33, in translate_to_french
+    translated_text = translator.translate(text, src='en', dest='fr')
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\googletrans\client.py", line 187, in translate
+    data = self._translate(text, dest, src, kwargs)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\googletrans\client.py", line 83, in _translate
+    token = self.token_acquirer.do(text)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\googletrans\gtoken.py", line 194, in do
+    self._update()
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\googletrans\gtoken.py", line 54, in _update
+    r = self.client.get(self.host)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1066, in get
+    return self.request(
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 837, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\jrf046\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1123)
