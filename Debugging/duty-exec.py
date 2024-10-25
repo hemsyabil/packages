@@ -30,7 +30,7 @@ print("----------------------------------------------------------------")
 
 
 def translate_to_french(text):
-    url = "https://libretranslate.com/translate"
+    url = "http://libretranslate.com/translate"
     params = {
         'q': text,
         'source': 'auto',  # Auto-detect source language
@@ -43,6 +43,7 @@ def translate_to_french(text):
     if response.status_code == 200:
         translation = response.json()
         return translation['translatedText']
+
 
 def get_day_of_week(date_string):
     date_obj = format_date_time_object(date_string)
@@ -106,7 +107,7 @@ def read_source_data(osr_file_path, osr_sheet_name, release_file_path):
         except:
             pass
 
-    with open(release_file_path, 'r', newline='') as csvfile:
+    with open(release_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         csv_reader = csv.reader(csvfile)
 
         rows_without_header = islice(csv_reader, 1, None)
@@ -692,6 +693,7 @@ if __name__ == "__main__":
 
     html_content = generate_html(
         sorted_maintenance_schedules, start_of_weekend, next_week_friday, total_records)
-    file_name = f'Duty Executive Lookahead: {start_of_weekend} - {next_week_friday}.html'
-    with open(file_name, "w") as f:
+    file_name = f'Duty Executive Lookahead {start_of_weekend} - {next_week_friday}.html'
+
+    with open(file_name, "w", encoding='utf-8') as f:
         f.write(html_content)
