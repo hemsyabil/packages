@@ -3,7 +3,7 @@ class Translator:
                  raise_exception=DEFAULT_RAISE_EXCEPTION,
                  proxies: typing.Dict[str, str] = None, timeout: Timeout = None):
 
-        self.client = Client()
+        self.client = httpx.Client()
         if proxies is not None:  # pragma: nocover
             # Set the proxies directly for httpx compatibility
             self.client.proxies = proxies
