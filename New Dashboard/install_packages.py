@@ -15,7 +15,11 @@ packages = [
     "flask-3.1.0-py3-none-any.whl",
     "itsdangerous-2.2.0-py3-none-any.whl",
     "importlib_metadata-8.5.0-py3-none-any.whl",
-    "colorama-0.4.6-py2.py3-none-any.whl"
+    "colorama-0.4.6-py2.py3-none-any.whl",
+
+    "et_xmlfile-2.0.0-py3-none-any.whl",
+    "openpyxl-3.1.5-py2.py3-none-any.whl",
+    "lxml-5.3.0-pp39-pypy39_pp73-win_amd64.whl"
 ]
 
 # Path to the directory containing the .whl files
