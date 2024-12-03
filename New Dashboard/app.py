@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 
-finance_app = Flask(__name__)
+dashboard_app = Flask(__name__)
 
-@finance_app.route('/')
+@dashboard_app.route('/')
 def dashboard():
     
     return render_template(
@@ -11,4 +11,4 @@ def dashboard():
         name="Financial Dashboard")
 
 if __name__ == "__main__":
-    finance_app.run(host='0.0.0.0', port=8080, debug=True)
+    dashboard_app.run(host='0.0.0.0', port=8080, debug=True)
