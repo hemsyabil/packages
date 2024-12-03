@@ -32,7 +32,8 @@ packages = [
     "hyperframe-6.0.1-py3-none-any.whl",
     "idna-3.10-py3-none-any.whl",
     "rfc3986-2.0.0-py2.py3-none-any.whl",
-    "sniffio-1.3.1-py3-none-any.whl"
+    "sniffio-1.3.1-py3-none-any.whl",
+    "googletrans-3.0.0.tar.gz"
 ]
 
 # Path to the directory containing the .whl files
