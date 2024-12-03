@@ -8,12 +8,14 @@ packages = [
     "wheel-0.45.1-py3-none-any.whl",
     "flit_core-3.10.1-py3-none-any.whl",
     "jinja2-3.1.4-py3-none-any.whl",
-    "MarkupSafe-3.0.2-cp39-cp39-win32.whl",
+    "MarkupSafe-3.0.2-cp39-cp39-win_amd64.whl",
     "werkzeug-3.1.3-py3-none-any.whl",
     "blinker-1.9.0-py3-none-any.whl",
     "click-8.1.7-py3-none-any.whl",
     "flask-3.1.0-py3-none-any.whl",
-    "itsdangerous-2.2.0-py3-none-any.whl"
+    "itsdangerous-2.2.0-py3-none-any.whl",
+    "importlib_metadata-8.5.0-py3-none-any.whl",
+    "colorama-0.4.6-py2.py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
