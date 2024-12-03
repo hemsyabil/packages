@@ -19,7 +19,20 @@ packages = [
 
     "et_xmlfile-2.0.0-py3-none-any.whl",
     "openpyxl-3.1.5-py2.py3-none-any.whl",
-    "lxml-5.3.0-pp39-pypy39_pp73-win_amd64.whl"
+    "lxml-5.3.0-pp39-pypy39_pp73-win_amd64.whl",
+
+    "certifi-2024.8.30-py3-none-any.whl",
+    "chardet-5.2.0-py3-none-any.whl",
+    "h11-0.14.0-py3-none-any.whl",
+    "h2-4.1.0-py3-none-any.whl",
+    "hpack-4.0.0-py3-none-any.whl",
+    "hstspreload-2024.12.1-py3-none-any.whl",
+    "httpcore-1.0.7-py3-none-any.whl",
+    "httpx-0.28.0-py3-none-any.whl",
+    "hyperframe-6.0.1-py3-none-any.whl",
+    "idna-3.10-py3-none-any.whl",
+    "rfc3986-2.0.0-py2.py3-none-any.whl",
+    "sniffio-1.3.1-py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
