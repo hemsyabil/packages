@@ -33,7 +33,11 @@ packages = [
     "idna-3.10-py3-none-any.whl",
     "rfc3986-2.0.0-py2.py3-none-any.whl",
     "sniffio-1.3.1-py3-none-any.whl",
-    "googletrans-3.0.0.tar.gz"
+    "googletrans-3.0.0.tar.gz", 
+
+    "charset_normalizer-3.4.0-cp39-cp39-win_amd64.whl",
+    "requests-2.32.3-py3-none-any.whl",
+    "urllib3-2.2.3-py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
