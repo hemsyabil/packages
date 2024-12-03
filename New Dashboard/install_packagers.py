@@ -3,6 +3,7 @@ import subprocess
 
 # List of packages to install in order
 packages = [
+    "flit_core-3.10.1.tar.gz"
     "Jinja2-3.1.4.tar.gz",
     "MarkupSafe-3.0.2.tar.gz",
     "Werkzeug-3.1.3.tar.gz",
