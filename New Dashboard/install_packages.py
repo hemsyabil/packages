@@ -49,6 +49,7 @@ packages = [
     "pyflakes-3.2.0-py2.py3-none-any.whl",
 
     # Pandas supports
+    "meson_python-0.17.1-py3-none-any.whl",
     "numpy-2.1.3.tar.gz",
     "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
     "pytz-2024.2-py2.py3-none-any.whl",
