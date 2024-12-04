@@ -46,7 +46,14 @@ packages = [
     "flake8-7.1.1-py2.py3-none-any.whl",
     "mccabe-0.7.0-py2.py3-none-any.whl",
     "pycodestyle-2.12.1-py2.py3-none-any.whl",
-    "pyflakes-3.2.0-py2.py3-none-any.whl"
+    "pyflakes-3.2.0-py2.py3-none-any.whl",
+
+    # Pandas supports
+    "numpy-2.1.3.tar.gz",
+    "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "pytz-2024.2-py2.py3-none-any.whl",
+    "tzdata-2024.2-py2.py3-none-any.whl",
+    "six-1.16.0-py2.py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
