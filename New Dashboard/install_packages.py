@@ -55,7 +55,8 @@ packages = [
     "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
     "pytz-2024.2-py2.py3-none-any.whl",
     "tzdata-2024.2-py2.py3-none-any.whl",
-    "six-1.16.0-py2.py3-none-any.whl"
+    "six-1.16.0-py2.py3-none-any.whl",
+    "pandas-2.2.3-cp39-cp39-win_amd64.whl"
 ]
 
 # Path to the directory containing the .whl files
