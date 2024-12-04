@@ -1,0 +1,13 @@
+[flake8]
+max-line-length = 160
+ignore = F401
+exclude =
+    .git,
+    migrations,
+    __pycache__,
+    manage.py,
+    settings.py,
+    venv,
+    build,
+    myenv
+max-complexity = 10
