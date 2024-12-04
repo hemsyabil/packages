@@ -21,7 +21,7 @@ packages = [
     # Openpyxl supports
     "et_xmlfile-2.0.0-py3-none-any.whl",
     "openpyxl-3.1.5-py2.py3-none-any.whl",
-    "lxml-5.3.0-pp39-pypy39_pp73-win_amd64.whl",
+    "lxml-5.3.0-cp39-cp39-win_amd64.whl",
 
     # Requests support
     "charset_normalizer-3.4.0-cp39-cp39-win_amd64.whl",
@@ -50,6 +50,7 @@ packages = [
 
     # Pandas supports
     "meson_python-0.17.1-py3-none-any.whl",
+    "tomli-2.2.1-py3-none-any.whl",
     "numpy-2.1.3.tar.gz",
     "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
     "pytz-2024.2-py2.py3-none-any.whl",
