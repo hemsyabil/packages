@@ -4,6 +4,7 @@ import pkg_resources  # To check installed packages
 
 # List of .whl files to install in order
 packages = [
+    # Flask supports
     "setuptools-75.6.0-py3-none-any.whl",
     "wheel-0.45.1-py3-none-any.whl",
     "flit_core-3.10.1-py3-none-any.whl",
@@ -17,27 +18,35 @@ packages = [
     "importlib_metadata-8.5.0-py3-none-any.whl",
     "colorama-0.4.6-py2.py3-none-any.whl",
 
+    # Openpyxl supports
     "et_xmlfile-2.0.0-py3-none-any.whl",
     "openpyxl-3.1.5-py2.py3-none-any.whl",
     "lxml-5.3.0-pp39-pypy39_pp73-win_amd64.whl",
 
-    "certifi-2024.8.30-py3-none-any.whl",
-    "chardet-5.2.0-py3-none-any.whl",
-    "h11-0.14.0-py3-none-any.whl",
-    "h2-4.1.0-py3-none-any.whl",
-    "hpack-4.0.0-py3-none-any.whl",
-    "hstspreload-2024.12.1-py3-none-any.whl",
-    "httpcore-1.0.7-py3-none-any.whl",
-    "httpx-0.28.0-py3-none-any.whl",
-    "hyperframe-6.0.1-py3-none-any.whl",
-    "idna-3.10-py3-none-any.whl",
-    "rfc3986-2.0.0-py2.py3-none-any.whl",
-    "sniffio-1.3.1-py3-none-any.whl",
-    "googletrans-3.0.0.tar.gz", 
-
+    # Requests support
     "charset_normalizer-3.4.0-cp39-cp39-win_amd64.whl",
     "requests-2.32.3-py3-none-any.whl",
-    "urllib3-2.2.3-py3-none-any.whl"
+    "urllib3-2.2.3-py3-none-any.whl",
+
+    # Argparse support
+    "argparse-1.4.0-py2.py3-none-any.whl",
+
+    # PUDB supports
+    "jedi-0.19.2-py2.py3-none-any.whl",
+    "packaging-24.2-py3-none-any.whl",
+    "parso-0.8.4-py2.py3-none-any.whl",
+    "pudb-2024.1.3-py3-none-any.whl",
+    "pygments-2.18.0-py3-none-any.whl",
+    "typing_extensions-4.12.2-py3-none-any.whl",
+    "urwid-2.6.16-py3-none-any.whl",
+    "urwid_readline-0.15.1.tar.gz",
+    "wcwidth-0.2.13-py2.py3-none-any.whl",
+
+    # Flake8 supports
+    "flake8-7.1.1-py2.py3-none-any.whl",
+    "mccabe-0.7.0-py2.py3-none-any.whl",
+    "pycodestyle-2.12.1-py2.py3-none-any.whl",
+    "pyflakes-3.2.0-py2.py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
