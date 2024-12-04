@@ -51,7 +51,7 @@ packages = [
     # Pandas supports
     "meson_python-0.17.1-py3-none-any.whl",
     "tomli-2.2.1-py3-none-any.whl",
-    "numpy-2.1.3.tar.gz",
+    "numpy-2.0.2-cp39-cp39-win_amd64.whl",
     "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
     "pytz-2024.2-py2.py3-none-any.whl",
     "tzdata-2024.2-py2.py3-none-any.whl",
