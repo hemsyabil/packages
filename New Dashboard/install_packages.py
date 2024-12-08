@@ -56,7 +56,19 @@ packages = [
     "pytz-2024.2-py2.py3-none-any.whl",
     "tzdata-2024.2-py2.py3-none-any.whl",
     "six-1.16.0-py2.py3-none-any.whl",
-    "pandas-2.2.3-cp39-cp39-win_amd64.whl"
+    "pandas-2.2.3-cp39-cp39-win_amd64.whl", 
+
+    # Dash and Plotly supports
+    "dash-2.18.2-py3-none-any.whl",
+    "dash_core_components-2.0.0-py3-none-any.whl",
+    "dash_html_components-2.0.0-py3-none-any.whl",
+    "dash_table-5.0.0-py3-none-any.whl",
+    "importlib_metadata-8.5.0-py3-none-any.whl",
+    "nest_asyncio-1.6.0-py3-none-any.whl",
+    "plotly-5.24.1-py3-none-any.whl",
+    "retrying-1.3.4-py3-none-any.whl",
+    "tenacity-9.0.0-py3-none-any.whl",
+    "zipp-3.21.0-py3-none-any.whl"
 ]
 
 # Path to the directory containing the .whl files
