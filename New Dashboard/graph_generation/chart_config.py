@@ -1,0 +1,1 @@
+# Configuration for chart styles and settings. 
