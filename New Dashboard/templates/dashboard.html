@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container">
-    <h3 class="changes-affecting-title">Heading for the key indices<sup>*</sup><span>Month YYYY</span></h3>
+    <h3 class="changes-affecting-title">Completed changes affecting regm<sup>*</sup><span>January 2025</span></h3>
     <div class="changes-affecting">
         <div class="affected-item">
             <p>Source 9<sup>**</sup></p>
@@ -16,7 +16,7 @@
             <p>13</p>
         </div>
         <div class="affected-item">
-            <p>UFOs/Pandhara Lalang</p>
+            <p>UFOs/Another Long Sources</p>
             <p>30</p>
         </div>
         <div class="affected-item">
@@ -25,15 +25,7 @@
         </div>
     </div>
 </div>
-<div class="container" style="margin-top: 60px;">
-    {% for graph in graphs %}
-    <div id="plot-{{ loop.index }}"></div>
-    <script>
-        const graphData = {{ graph | safe }};
-        Plotly.newPlot('plot-{{ loop.index }}', graphData.data, graphData.layout);
-    </script>
-    {% endfor %}
-</div>
+<div class="container" style="margin-top: 60px;"></div>
 
 {% endblock content %}
 

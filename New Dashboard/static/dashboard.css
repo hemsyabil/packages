@@ -1,5 +1,4 @@
 .changes-affecting-title {
-    position: absolute;
     padding-left: 10px;
     color: var(--jet-color);
     text-transform: uppercase;
@@ -14,7 +13,7 @@
     width: 100%;
     display: flex;
     flex-grow: space-between;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--card-box-shadow);
     border-radius: 6px;
     background-color: var(--seasalt-color);
 }
@@ -23,13 +22,14 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--card-box-shadow);
     border-radius: 6px;
     padding: 10px;
     position: relative;
-    margin: 60px 30px -30px 30px;
+    margin: 10px 10px -30px 10px;
     z-index: 1;
     background-color: var(--seasalt-color);
+    word-wrap: break-word;
 }
 .affected-item:hover {
     box-shadow: var(--box-shadow-hover);
@@ -42,7 +42,6 @@
 .affected-item > p:last-child {
     font-weight: 600;
     font-size: 36px;
-    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {

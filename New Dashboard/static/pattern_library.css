@@ -9,6 +9,9 @@
 
     --box-shadow-hover: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     --box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    --card-box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    --card-box-border: rgba(0, 0, 0, 0.125);
 }
 a {
     text-decoration: none;
@@ -36,4 +39,11 @@ h3 {
 p {
     font-size: 16px;
     font-weight: 400;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: var(--jet-color);
+    font-weight: 500;
+}
+.navbar-default .navbar-brand {
+    font-size: 24px;
 }
